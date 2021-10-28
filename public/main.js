@@ -85,7 +85,7 @@ function resuelve() {
   }
   console.log(`tabla`, tabla)
   var resultado = algoritmoEsquina(tabla);
-  alert("El resultado es: " + resultado);
+  // alert("El resultado es: " + resultado);
 }
 
 function algoritmoEsquina(tabla) {
