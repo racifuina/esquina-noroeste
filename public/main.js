@@ -196,12 +196,14 @@ function algoritmoEsquina(tabla) {
   tblBody.appendChild(hilera);
   tabla.appendChild(tblBody);
   var celda = document.createElement("td");
-  var textoCelda = document.createTextNode('');
+  celda.setAttribute("class", "text-primary fw-bold")
+  var textoCelda = document.createTextNode('Total');
   celda.appendChild(textoCelda);
   hilera.appendChild(celda);
   tblBody.appendChild(hilera);
   tabla.appendChild(tblBody);
   var celda = document.createElement("td");
+  celda.setAttribute("class", "text-primary fw-bold")
   var textoCelda = document.createTextNode(resultado);
   celda.appendChild(textoCelda);
   hilera.appendChild(celda);
