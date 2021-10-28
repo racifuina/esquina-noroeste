@@ -83,6 +83,7 @@ function resuelve() {
     }
     tabla[i - 1] = col;
   }
+  console.log(`tabla`, tabla)
   var resultado = algoritmoEsquina(tabla);
   alert("El resultado es: " + resultado);
 }
@@ -153,7 +154,22 @@ function algoritmoEsquina(tabla) {
 
   var tblBody = document.createElement("tbody");
   tabla.setAttribute("id", "tablas");
-
+  var tblHead = document.createElement("thead");
+  var header = document.createElement("tr");
+  var costo = document.createElement("th");
+  var costoText = document.createTextNode("Costo");
+  costo.append(costoText);
+  var unidades = document.createElement("th");
+  var unidadesText = document.createTextNode("Unidades");
+  unidades.append(unidadesText);
+  var total = document.createElement("th");
+  var totalText = document.createTextNode("Total");
+  total.append(totalText);
+  header.append(costo)
+  header.append(unidades)
+  header.append(total)
+  tblHead.append(header)
+  
   // Crea las celdas
   for (var i = 0; i < res1.length; i++) {
     // Crea las hileras de la tabla
@@ -190,11 +206,10 @@ function algoritmoEsquina(tabla) {
   celda.appendChild(textoCelda);
   hilera.appendChild(celda);
   tblBody.appendChild(hilera);
+  tabla.appendChild(tblHead);
   tabla.appendChild(tblBody);
   // appends <table> into <body>
   body.appendChild(tabla);
-  // modifica el atributo "border" de la tabla y lo fija a "2";
-  // tabla.setAttribute("border", "2");
   //------------------------------------------------------------------
   return resultado;
 }
