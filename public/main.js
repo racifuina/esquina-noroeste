@@ -163,7 +163,7 @@ function algoritmoEsquina(tabla) {
   var unidadesText = document.createTextNode("Unidades");
   unidades.append(unidadesText);
   var total = document.createElement("th");
-  var totalText = document.createTextNode("Total");
+  var totalText = document.createTextNode("Subtotal");
   total.append(totalText);
   header.append(costo)
   header.append(unidades)
