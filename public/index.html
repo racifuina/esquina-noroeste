@@ -8,6 +8,12 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <style>
+    .container {
+      width: auto;
+      max-width: 680px;
+      padding: 0 15px;
+    }
+
     textarea:hover,
     input:hover,
     textarea:active,
@@ -40,35 +46,41 @@
 </head>
 
 <body>
-  <div class="header bg-primary p-3 text-white">
-    <h1 id="titulo">Método de Esquina Noroeste
-      <small class="float-right text-right">
-        <a href="https://github.com/racifuina/esquina-noroeste" class="text-white">
-          Código fuente
-        </a>
-
-      </small>
-    </h1>
-  </div>
-  <div class="container-fluid mt-3">
-    <form name="datos" id="form1" action="index.html" method="post">
-      <label for="fil" class="form-label">Fuentes: </label>
-      <input value="3" type="number" name="filas" id="fil" class="form-control" autofocus />
-      <label for="col" class="form-label">Destinos: </label>
-      <input value="3" type="number" name="columnas" id="col" class="form-control" />
-      <div class="d-grid gap-2">
-        <input type="button" class="btn btn-outline-success my-3" value="Generar tabla" onclick="generaTabla()"
-          id="env">
-      </div>
-    </form>
-    <div id="button-div">
-      <div class="d-grid gap-2">
-        <input type="button" class="btn btn-outline-danger my-3" value="Crear otra tabla" onclick="atras()" id="repito"
-          style="display: none">
-      </div>
+  <main class="flex-shrink-0">
+    <div class="header bg-primary p-3 text-white">
+      <h1 id="titulo">Método de Esquina Noroeste
+        <small class="float-right text-right">
+          <a href="https://github.com/racifuina/esquina-noroeste" class="text-white">
+            Código fuente
+          </a>
+        </small>
+      </h1>
     </div>
+    <div class="container-fluid mt-3">
+      <form name="datos" id="form1" action="index.html" method="post">
+        <label for="fil" class="form-label">Fuentes: </label>
+        <input value="3" type="number" name="filas" id="fil" class="form-control" autofocus />
+        <label for="col" class="form-label">Destinos: </label>
+        <input value="3" type="number" name="columnas" id="col" class="form-control" />
+        <div class="d-grid gap-2">
+          <input type="button" class="btn btn-outline-success my-3" value="Generar tabla" onclick="generaTabla()"
+            id="env">
+        </div>
+      </form>
+      <div id="button-div">
+        <div class="d-grid gap-2">
+          <input type="button" class="btn btn-outline-danger my-3" value="Crear otra tabla" onclick="atras()"
+            id="repito" style="display: none">
+        </div>
+      </div>
 
-  </div>
+    </div>
+  </main>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Desarrollado por <a href="http://rigoberto.acifuina.com">Rigoberto Acifuina</a></span>
+    </div>
+  </footer>
 </body>
 <script src="main.js"></script>
 
